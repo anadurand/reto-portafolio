@@ -1,0 +1,24 @@
+.idle{
+  background-color: #a1c7f0;
+
+}
+.building{
+  background-color:#e6d1eb;
+}
+.idle, .building {
+  border: 1px solid;
+  -webkit-border-radius: 5px 10px;  /* Safari  */
+  -moz-border-radius: 5px 10px;     /* Firefox */
+  margin-top: 20px;
+  padding: 10px;
+}
+.negrita{
+  font-size: small;
+  font-weight: bold;
+}
+.tooltip{
+  visibility: hidden;
+  border-radius: 4px;
+  position: absolute;
+  border: 1px solid;
+}
