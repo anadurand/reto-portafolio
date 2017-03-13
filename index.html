@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
     <link href="https://fonts.googleapis.com/css?family=Prompt:200,300,400,500" rel="stylesheet">
     <!-- Optional theme -->
-    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="assets/css/main.css">
   </head>
   <body>
     <div class="container">
@@ -17,37 +17,55 @@
         Signed in as Member -> <a href="#">Sing out</a>
       </div>
 
-      <div class="row">
-        <!-- Nav tabs -->
-        <ul class="nav nav-tabs" role="tablist">
-          <li role="presentation" ><a href="#dashboard" aria-controls="home" role="tab" data-toggle="tab">DASHBOARD</a></li>
-          <li role="presentation"><a href="#mycruise" aria-controls="profile" role="tab" data-toggle="tab">MY CRUISE</a></li>
-          <li role="presentation"><a href="#agents" aria-controls="messages" role="tab" data-toggle="tab" class="active">AGENTS</a></li>
-          <li role="presentation"><a href="#help" aria-controls="settings" role="tab" data-toggle="tab">HELP</a></li>
+      <div id="tabs" class="container">
+        <!-- Nav tabs --><h1>Cruise</h1>
+        <ul class="nav nav-pills" style="float:right;">
+          <li><a href="#dashboard" data-toggle="tab">DASHBOARD</a></li>
+          <li><a href="#mycruise"  data-toggle="tab">MY CRUISE</a></li>
+          <li class="active"><a href="#agents"  data-toggle="tab" >AGENTS</a></li>
+          <li><a href="#help" data-toggle="tab">HELP</a></li>
         </ul>
-
         <!-- Tab panes -->
-        <div class="tab-content">
-          <div role="tabpanel" class="tab-pane active" id="dashboard">...</div>
-          <div role="tabpanel" class="tab-pane" id="mycruise">...</div>
-          <div role="tabpanel" class="tab-pane" id="agents">
-            <div class="col-lg-8">
-    equipos
+        <div class="tab-content clearfix">
+          <div class="tab-pane" id="dashboard">...</div>
+          <div class="tab-pane" id="mycruise">...</div>
+          <div class="tab-pane active" id="agents">
+            <div class="row">
+              <div class="col-lg-1">
+                <p style="padding-top:15px;">Agents</p>
+              </div>
+              <div class="col-lg-11">
+                <button type="button" class="btn btn-default navbar-btn">All</button>
+                <button type="button" class="btn btn-default navbar-btn">Physical</button>
+                <button type="button" class="btn btn-default navbar-btn">Virtual</button>
+              </div>
             </div>
-            <div class="col-lg-4">
-    summary
+            <div class="CuerpoTab row">
+              <div class="col-lg-8">
+                equipos
+              </div>
+              <div class="col-lg-4">
+                <h3>Summary</h3>
+                <p>Building</p>
+                <p>Idle</p>
+                <hr>
+                <h3>History</h3>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+              </div>
             </div>
           </div>
           <div role="tabpanel" class="tab-pane" id="help">...</div>
         </div>
-
-
       </div>
-
     </div>
 
     <!-- /container -->
     <script type='text/javascript' src='assets/js/app.js'></script>
-
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+	<!-- Placed at the end of the document so the pages load faster
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+	<script src="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+  -->
   </body>
 </html>

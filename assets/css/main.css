@@ -1,0 +1,26 @@
+* {
+  font-family: 'Prompt', sans-serif;
+}
+#tabs .tab-content {
+  color : white;
+  background-color: #428bca;
+  padding : 5px 15px;
+  margin-top: 50px;
+}
+#tabs .nav-pills > li{
+  border: 1px solid #337ab7;
+  border-radius: 4px 4px 0px 0px;
+}
+#tabs .nav-pills > li > a{
+  border: 0px;
+  border-radius: 2px 2px 0px 0px;
+}
+a:hover {
+    color: #309369;
+
+}
+.CuerpoTab{
+  border: 1px solid #337ab7;
+  background-color: #ffffff;
+  color: black;
+}
