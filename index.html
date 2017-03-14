@@ -16,7 +16,6 @@
       <div class="row" style="float:right;">
         Signed in as Member -> <a href="#">Sing out</a>
       </div>
-
       <div id="tabs" class="container">
         <!-- Nav tabs --><h1>Cruise</h1>
         <ul class="nav nav-pills" style="float:right;">
@@ -42,27 +41,25 @@
             </div>
             <div class="CuerpoTab row">
               <div class="col-lg-8">
-                <br>
-                <div class="idle">
-                  <p><span class="negrita">bjstdmngbgr02.thoughtworks.com</span> | idle | 192.168.1.2 | /var/lib/cruise-agent</p>
-                  <span class="negrita">+</span><a href="#">Specify Resources</a>
-                  <span> | Resources: </span>
+                <div class="idle row">
+                  <div class="col-lg-2">
+                    <img src="assets/images/computer.png" alt="">
+                  </div>
+                  <div class="col-lg-10">
+                    <p><span class="negrita">bjstdmngbgr02.thoughtworks.com</span> | idle | 192.168.1.2 | /var/lib/cruise-agent</p>
+                    <span class="cssToolTip">+<a href="#"> Specify Resources</a>
+                      <span>
+                        <p class="text-success">(Separete multiple resources name with commas)</p>
+                        <div class="form-group">
+                          <input type="text" class="form-control">
+                        </div>
+                        <button class="btnTooltip">Add resource</button>
+                        <button class="btnTooltip">Close</button>
+                      </span>
+                    </span>
+                  </div>
                 </div>
-                <div class="building">
-                  <p><span class="negrita">bjstdmngbgr02.thoughtworks.com</span> | idle | 192.168.1.2 | /var/lib/cruise-agent</p>
-                  <span class="negrita">+</span><a href="#">Specify Resources</a>
-                  <span> | Resources: </span>
-                </div>
-                <div class="building">
-                  <p><span class="negrita">bjstdmngbgr02.thoughtworks.com</span>  | idle | 192.168.1.2 | /var/lib/cruise-agent</p>
-                  <span class="negrita">+</span><a href="#">Specify Resources</a>
-                  <span> | Resources: </span>
-                </div>
-                <div class="idle">
-                  <p><span class="negrita">bjstdmngbgr02.thoughtworks.com</span>  | idle | 192.168.1.2 | /var/lib/cruise-agent</p>
-                  <span class="negrita">+</span><a href="#">Specify Resources</a>
-                  <span> | Resources: </span>
-                </div>
+        
               </div>
               <div class="col-lg-4">
                 <h3>Summary</h3>
@@ -76,6 +73,9 @@
           </div>
           <div role="tabpanel" class="tab-pane" id="help">...</div>
         </div>
+      </div>
+      <div class="row">
+        <p>Copyright: ThoughtWorks INC.</p>
       </div>
     </div>
 
