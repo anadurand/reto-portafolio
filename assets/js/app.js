@@ -91,20 +91,21 @@ window.addEventListener('load',function(){
   //aki tiene q ser en el evento click del boton btnAdd
   //-----Cambiar
   document.getElementById('r1').onclick=function(){
-    creaToolTip();
-    document.getElementById("myDropdown").classList.toggle("show");
-    window.onclick = function(event) {
-    	if (!event.target.matches('.dropbtn')) {
-    		var dropdowns = document.getElementsByClassName("dropdown-content");
-    		var i;
-    		for (i = 0; i < dropdowns.length; i++) {
-    			var openDropdown = dropdowns[i];
-    			if (openDropdown.classList.contains('show')) {
-    				openDropdown.classList.remove('show');
-    			}
-    		}
-    	}
-    }
+    // creaToolTip();
+    // document.getElementById("myDropdown").classList.toggle("show");
+    // window.onclick = function(event) {
+    // 	if (!event.target.matches('.dropbtn')) {
+    // 		var dropdowns = document.getElementsByClassName("dropdown-content");
+    // 		var i;
+    // 		for (i = 0; i < dropdowns.length; i++) {
+    // 			var openDropdown = dropdowns[i];
+    // 			if (openDropdown.classList.contains('show')) {
+    // 				openDropdown.classList.remove('show');
+    // 			}
+    // 		}
+    // 	}
+    // }
+    creaRecursos();
   }
 
   document.getElementById('btnAdd').onclick=function(e){
