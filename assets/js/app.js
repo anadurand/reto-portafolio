@@ -30,6 +30,7 @@ window.addEventListener('load',function(){
     span.setAttribute("id",'elementos');
     a.setAttribute("href",'#');
     a.setAttribute("id",'r1');
+    a.setAttribute("class",'dropbtn');
     b1.innerHTML="bjstdmngbgr02.thoughtworks.com | "+tipo+ " | "+ip+" | "+direc;
     p1.appendChild(b1);
     b2.innerHTML="+ ";
@@ -43,7 +44,27 @@ window.addEventListener('load',function(){
     article.appendChild(divTexto);
     section.appendChild(article);
   }
-creaArticles();
+  creaArticles();
+
+  function creaToolTip(){
+    var tool=document.createElement("div");
+    var p=document.createElement("p");
+    var inputResource=document.createElement("input");
+    var btnAdd=document.createElement("button");
+    var btnClose=document.createElement("button");
+    tool.setAttribute("id",'myDropdown');
+    tool.setAttribute("class",'dropdown-content');
+    btnAdd.setAttribute("id",'btnAdd');
+    btnClose.setAttribute("id",'btnClose');
+    p.innerHTML="(Separete multiple resources name with commas)";
+    btnAdd.innerHTML="Add resources";
+    btnClose.innerHTML="Close";
+    tool.appendChild(p);
+    tool.appendChild(inputResource);
+    tool.appendChild(btnAdd);
+    tool.appendChild(btnClose);
+    document.body.appendChild(tool);
+  }
 
   function creaRecursos(){
     var texto=prompt("Ingrese un recurso");
@@ -67,9 +88,30 @@ creaArticles();
     });
 
   }
+  //aki tiene q ser en el evento click del boton btnAdd
+  //-----Cambiar
   document.getElementById('r1').onclick=function(){
+    creaToolTip();
+    document.getElementById("myDropdown").classList.toggle("show");
+    window.onclick = function(event) {
+    	if (!event.target.matches('.dropbtn')) {
+    		var dropdowns = document.getElementsByClassName("dropdown-content");
+    		var i;
+    		for (i = 0; i < dropdowns.length; i++) {
+    			var openDropdown = dropdowns[i];
+    			if (openDropdown.classList.contains('show')) {
+    				openDropdown.classList.remove('show');
+    			}
+    		}
+    	}
+    }
+  }
+
+  document.getElementById('btnAdd').onclick=function(e){
+    //e.preventDefault();
     creaRecursos();
   }
+
 });
 
 // if (typeof exports != undefined) {
