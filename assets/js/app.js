@@ -9,7 +9,6 @@ window.addEventListener('load',function(){
     }
   }
   var rec=new Portafolio();
-  //var elementos=document.getElementById('elementos');
   var section=document.getElementById('section');
   var idSpan=0,idBtn=0, arr=[];
 

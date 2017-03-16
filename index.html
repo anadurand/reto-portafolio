@@ -16,55 +16,70 @@
       <div class="row" style="float:right;">
         Signed in as Member -> <a href="#">Sing out</a>
       </div>
-
-      <div class="row">
-        <!-- Nav tabs -->
-        <ul class="nav nav-tabs" role="tablist">
-          <li role="presentation" ><a href="#dashboard" aria-controls="home" role="tab" data-toggle="tab">DASHBOARD</a></li>
-          <li role="presentation"><a href="#mycruise" aria-controls="profile" role="tab" data-toggle="tab">MY CRUISE</a></li>
-          <li role="presentation"><a href="#agents" aria-controls="messages" role="tab" data-toggle="tab" class="active">AGENTS</a></li>
-          <li role="presentation"><a href="#help" aria-controls="settings" role="tab" data-toggle="tab">HELP</a></li>
+      <div id="tabs" class="container">
+        <h1>Cruise</h1>
+        <ul class="nav nav-pills" style="float:right;">
+          <li><a href="#dashboard" data-toggle="tab">DASHBOARD</a></li>
+          <li><a href="#mycruise"  data-toggle="tab">MY CRUISE</a></li>
+          <li class="active"><a href="#agents"  data-toggle="tab" >AGENTS</a></li>
+          <li><a href="#help" data-toggle="tab">HELP</a></li>
         </ul>
-
         <!-- Tab panes -->
-        <div class="tab-content">
-          <div role="tabpanel" class="tab-pane" id="dashboard">...</div>
-          <div role="tabpanel" class="tab-pane" id="mycruise">...</div>
-          <div role="tabpanel" class="tab-pane active" id="agents">
+        <div class="tab-content clearfix">
+          <div class="tab-pane" id="dashboard">...</div>
+          <div class="tab-pane" id="mycruise">...</div>
+          <div class="tab-pane active" id="agents">
+            <div class="row">
+              <div class="col-lg-1">
+                <p style="padding-top:15px;">Agents</p>
+              </div>
+              <div class="col-lg-11">
+                <button type="button" class="btn btn-default navbar-btn">All</button>
+                <button type="button" class="btn btn-default navbar-btn">Physical</button>
+                <button type="button" class="btn btn-default navbar-btn">Virtual</button>
+              </div>
+            </div>
+            <div class="CuerpoTab row">
             <div class="col-lg-8" id="section">
-              <br>
-              <!-- <div class="idle">
-                <p><span class="negrita">bjstdmngbgr02.thoughtworks.com</span> | idle | 192.168.1.2 | /var/lib/cruise-agent</p>
-                <span class="negrita">+</span><a id="r1" href="#">Specify Resources</a> | Resources:
-                <span id="elementos"></span>
-              </div> -->
-              <div class="building">
-                <p><span class="negrita">bjstdmngbgr02.thoughtworks.com</span> | idle | 192.168.1.2 | /var/lib/cruise-agent</p>
-                <span class="negrita">+</span><a href="#">Specify Resources</a>
-                <span> | Resources: </span>
-              </div>
-              <div class="building">
-                <p><b>bjstdmngbgr02.thoughtworks.com | idle | 192.168.1.2 | /var/lib/cruise-agent</b></p>
-                <span class="negrita">+</span><a href="#">Specify Resources</a>
-                <span> | Resources: </span>
-              </div>
-              <div class="idle">
-                <p><span class="negrita">bjstdmngbgr02.thoughtworks.com</span>  | idle | 192.168.1.2 | /var/lib/cruise-agent</p>
-                <span class="negrita">+</span><a href="#">Specify Resources</a>
-                <span> | Resources: </span>
+              <div class="idle row">
+                <div class="col-lg-2">
+                  <img src="assets/images/computer.png" alt="">
+                </div>
+                <div class="col-lg-10">
+                  <p><span class="negrita">bjstdmngbgr02.thoughtworks.com</span> | idle | 192.168.1.2 | /var/lib/cruise-agent</p>
+                  <span class="cssToolTip">+<a href="#"> Specify Resources</a>
+                    <span>
+                      <p class="text-success">(Separete multiple resources name with commas)</p>
+                      <div class="form-group">
+                        <input type="text" class="form-control">
+                      </div>
+                      <button class="btnTooltip">Add resource</button>
+                      <button class="btnTooltip">Close</button>
+                    </span>
+                  </span>
+                </div>
               </div>
             </div>
             <div class="col-lg-4">
-    summary
+              <h3>Summary</h3>
+              <p>Building</p>
+              <p>Idle</p>
+              <hr>
+              <h3>History</h3>
+              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
             </div>
           </div>
-          <div role="tabpanel" class="tab-pane" id="help">...</div>
         </div>
+        <div role="tabpanel" class="tab-pane" id="help">...</div>
       </div>
     </div>
-
+    <div class="row">
+      <p>Copyright: ThoughtWorks INC.</p>
+    </div>
+  </div>
     <!-- /container -->
-    <script type='text/javascript' src='assets/js/app.js'></script>
+    <script type='text/javascript' src='assets/js/agents.js'></script>
+    <!-- <script type='text/javascript' src='assets/js/app.js'></script> -->
 
   </body>
 </html>

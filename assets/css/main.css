@@ -1,6 +1,31 @@
+* {
+  font-family: 'Prompt', sans-serif;
+}
+#tabs .tab-content {
+  color : white;
+  background-color: #428bca;
+  padding : 5px 15px;
+  margin-top: 50px;
+}
+#tabs .nav-pills > li{
+  border: 1px solid #337ab7;
+  border-radius: 4px 4px 0px 0px;
+}
+#tabs .nav-pills > li > a{
+  border: 0px;
+  border-radius: 2px 2px 0px 0px;
+}
+a:hover {
+    color: #309369;
+
+}
+.CuerpoTab{
+  border: 1px solid #337ab7;
+  background-color: #ffffff;
+  color: black;
+}
 .idle{
   background-color: #a1c7f0;
-
 }
 .building{
   background-color:#e6d1eb;
@@ -9,8 +34,11 @@
   border: 1px solid;
   -webkit-border-radius: 5px 10px;  /* Safari  */
   -moz-border-radius: 5px 10px;     /* Firefox */
-  margin-top: 20px;
+  margin-top: 15px;
   padding: 10px;
+  height: auto;
+  margin-left: 0px;
+  margin-right: 0px;
 }
 .negrita{
   font-size: small;
@@ -21,4 +49,40 @@
   border-radius: 4px;
   position: absolute;
   border: 1px solid;
+}
+/* Clase que tendra el tooltip */
+.cssToolTip {
+ position: relative; /* Esta clase tiene que tener posicion relativa */
+ color: #ff8c00; /* Color del texto */
+}
+
+/* El tooltip */
+.cssToolTip span {
+ background: #b6e6cc;
+ border: 1px solid #000000;
+ border-radius: 5px;
+ box-shadow: 5px 5px 5px #333;
+ color: #333333;
+ display: none; /* El tooltip por defecto estara oculto */
+ font-size: 0.8em;
+ padding: 10px;
+ /*max-width: 6000px;*/
+ position: absolute; /* El tooltip se posiciona de forma absoluta para no modificar el aspezto del resto de la pagina */
+ top: 15px; /* Posicion apartir de la parte superior del primer elemento padre con posicion relativa */
+ left: 100px; /* Posicion apartir de la parte izquierda del primer elemento padre con posicion relativa */
+ z-index: 100;
+ width: 250%;/* Poner un z-index alto para que aparezca por encima del resto de elementos */
+}
+
+/* El tooltip cuando se muestra */
+.cssToolTip:hover span {
+ display: inline; /* Para mostrarlo simplemente usamos display block por ejemplo */
+}
+.btnTooltip{
+  color: #000;
+  background-color: #ffffff;
+  border-color: #87cefa;
+  border-radius: 5px;
+  border-style: none;
+  padding: 8px;
 }
