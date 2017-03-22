@@ -15,9 +15,18 @@
   border: 0px;
   border-radius: 2px 2px 0px 0px;
 }
+.imgclass{
+  width: 50px;
+  height: 50px;
+  vertical-align: middle;
+}
+.elements{
+  display: inline-block;
+  vertical-align: top;
+  margin: 10px;
+}
 a:hover {
     color: #309369;
-
 }
 .CuerpoTab{
   border: 1px solid #337ab7;
@@ -32,18 +41,15 @@ a:hover {
 }
 .idle, .building {
   border: 1px solid;
-  -webkit-border-radius: 5px 10px;  /* Safari  */
-  -moz-border-radius: 5px 10px;     /* Firefox */
+  -webkit-border-radius: 10px 10px;  /* Safari  */
+  -moz-border-radius: 10px 10px;     /* Firefox */
   margin-top: 15px;
   padding: 10px;
   height: auto;
   margin-left: 0px;
   margin-right: 0px;
 }
-.negrita{
-  font-size: small;
-  font-weight: bold;
-}
+
 .tooltip{
   visibility: hidden;
   border-radius: 4px;
@@ -53,30 +59,64 @@ a:hover {
 /* Clase que tendra el tooltip */
 .cssToolTip {
  position: relative; /* Esta clase tiene que tener posicion relativa */
- color: #ff8c00; /* Color del texto */
+ /*color: #ff8c00; /* Color del texto */*/
 }
 
 /* El tooltip */
-.cssToolTip span {
+.cssToolTip div {
  background: #b6e6cc;
  border: 1px solid #000000;
- border-radius: 5px;
+ border-radius: 10px;
+ -webkit-border-radius: 10px;
+ -moz-border-radius: 10px;
  box-shadow: 5px 5px 5px #333;
  color: #333333;
- display: none; /* El tooltip por defecto estara oculto */
+ /*display: none; /* El tooltip por defecto estara oculto */
+ visibility: hidden;
  font-size: 0.8em;
  padding: 10px;
  /*max-width: 6000px;*/
  position: absolute; /* El tooltip se posiciona de forma absoluta para no modificar el aspezto del resto de la pagina */
- top: 15px; /* Posicion apartir de la parte superior del primer elemento padre con posicion relativa */
- left: 100px; /* Posicion apartir de la parte izquierda del primer elemento padre con posicion relativa */
+ margin-top: 15px; /* Posicion apartir de la parte superior del primer elemento padre con posicion relativa */
+ left: 20px; /* Posicion apartir de la parte izquierda del primer elemento padre con posicion relativa */
  z-index: 100;
- width: 250%;/* Poner un z-index alto para que aparezca por encima del resto de elementos */
+ width: 60%;/* Poner un z-index alto para que aparezca por encima del resto de elementos */
 }
 
+
 /* El tooltip cuando se muestra */
-.cssToolTip:hover span {
- display: inline; /* Para mostrarlo simplemente usamos display block por ejemplo */
+
+
+.cssToolTip .tooltip:after {
+  content: '';
+  position: absolute;
+  border-style: solid;
+  border-width: 0 22px 25px;
+  border-color: #E1EED1 transparent;
+  display: block;
+  width: 0;
+  z-index: 1;
+  margin-left: -22px;
+  top: -25px;
+  left: 16%;
+}
+
+.cssToolTip .tooltip:before{
+  content: '';
+  position: absolute;
+  border-style: solid;
+  border-width: 0 23px 26px;
+  border-color: #52341b transparent;
+  display: block;
+  width: 0;
+  z-index: 0;
+  margin-left: -23px;
+  top: -28px;
+  left: 16%;
+}
+
+.cssToolTip .show {
+  visibility: visible;
 }
 .btnTooltip{
   color: #000;
