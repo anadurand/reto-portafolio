@@ -40,6 +40,7 @@ function Agents(properties){
         divResources.innerHTML="<b> + </b>";
         var a=document.createElement('a');
         a.id="specify"+i;
+        a.className="specify";
         a.innerHTML="Specify Resources";
         divResources.appendChild(a);
 
@@ -75,6 +76,14 @@ function Agents(properties){
           var tooltip=document.getElementById(divTool.id);
           tooltip.classList.toggle("show");
           inputTool.focus();
+          window.onclick=function(event){
+            if(!event.target.matches('.specify')){
+              //var tool=
+              if (tooltip.classList.contains('show')) {
+                tooltip.classList.remove('show');
+        			}
+            }
+          }
         });
 
         btnAddResource.onclick=function(e){
@@ -106,6 +115,7 @@ function Agents(properties){
 
                 btnDelete.onclick=function(e){
                   var idPadre=e.target.parentNode.getAttribute('id');
+                  console.log(idPadre);
                   spanResources.removeChild(newResource);
                   arrayResources.splice(idPadre,1);
                   console.log(arrayResources+"**");

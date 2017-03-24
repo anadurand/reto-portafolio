@@ -43,11 +43,9 @@ a:hover {
   border: 1px solid;
   -webkit-border-radius: 10px 10px;  /* Safari  */
   -moz-border-radius: 10px 10px;     /* Firefox */
-  margin-top: 15px;
+  margin: 15px;
   padding: 10px;
   height: auto;
-  margin-left: 0px;
-  margin-right: 0px;
 }
 
 .tooltip{

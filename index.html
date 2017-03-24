@@ -1,85 +1,76 @@
-<html lang="es">
-  <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>ThoughtWorks | Front-End Developer Interview Homework</title>
-    <link rel="icon"  type="image/ico"  href="https://www.thoughtworks.com/imgs/favicons/favicon.ico">
-    <!-- Latest compiled and minified CSS -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
-    <link href="https://fonts.googleapis.com/css?family=Prompt:200,300,400,500" rel="stylesheet">
-    <!-- Optional theme -->
-    <link rel="stylesheet" href="assets/css/main.css">
-  </head>
-  <body>
-    <div class="container">
-      <div class="row" style="float:right;">
-        Signed in as Member -> <a href="#">Sing out</a>
-      </div>
-      <div id="tabs" class="container">
-        <h1>Cruise</h1>
-        <ul class="nav nav-pills" style="float:right;">
-          <li><a href="#dashboard" data-toggle="tab">DASHBOARD</a></li>
-          <li><a href="#mycruise"  data-toggle="tab">MY CRUISE</a></li>
-          <li class="active"><a href="#agents"  data-toggle="tab" >AGENTS</a></li>
-          <li><a href="#help" data-toggle="tab">HELP</a></li>
-        </ul>
-        <!-- Tab panes -->
-        <div class="tab-content clearfix">
-          <div class="tab-pane" id="dashboard">...</div>
-          <div class="tab-pane" id="mycruise">...</div>
-          <div class="tab-pane active" id="agents">
-            <div class="row">
-              <div class="col-lg-1">
-                <p style="padding-top:15px;">Agents</p>
-              </div>
-              <div class="col-lg-11">
-                <button type="button" class="btn btn-default navbar-btn">All</button>
-                <button type="button" class="btn btn-default navbar-btn">Physical</button>
-                <button type="button" class="btn btn-default navbar-btn">Virtual</button>
-              </div>
+  <html lang="es">
+    <head>
+      <meta charset="utf-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <title>ThoughtWorks | Front-End Developer Interview Homework</title>
+      <link rel="icon"  type="image/ico"  href="https://www.thoughtworks.com/imgs/favicons/favicon.ico">
+      <!-- Latest compiled and minified CSS -->
+      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+      <link href="https://fonts.googleapis.com/css?family=Prompt:200,300,400,500" rel="stylesheet">
+      <!-- Optional theme -->
+      <link rel="stylesheet" href="assets/css/main.css">
+    </head>
+    <body>
+      <div class="container">
+        <header class="row" style="float:right;">
+          Signed in as Member -> <a href="#">Sing out</a>
+        </header>
+        <div id="tabs" class="container">
+          <h1>Cruise</h1>
+          <ul class="nav nav-pills" style="float:right;">
+            <li class="tab"><a href="#dashboard">DASHBOARD</a></li>
+            <li class="tab"><a href="#mycruise">MY CRUISE</a></li>
+            <li class="tab"><a href="#agents">AGENTS</a></li>
+            <li class="tab"><a href="#help" >HELP</a></li>
+          </ul>
+          <!-- Tab panes -->
+          <div class="tab-content clearfix">
+            <div class="tab-pane" id="dashboard">
+              <nav class="row">Dashboard</nav>
+              <div class="CuerpoTab row"><h2>Aqui contenido de Dashboard</h2></div>
             </div>
-            <div class="CuerpoTab row">
-            <div class="col-lg-8" id="section">
-              <!-- <div class="idle row">
-                <div class="col-lg-2">
-                  <img src="assets/images/computer.png" alt="">
+            <div class="tab-pane" id="mycruise">
+              <nav class="row">My Cruise</nav>
+              <div class="CuerpoTab row"><h2>Aqui contenido de My Cruise</h2></div>
+            </div>
+            <div class="tab-pane active" id="agents">
+              <nav class="row">
+                <div class="col-lg-1">
+                  <p style="padding-top:15px;">Agents</p>
                 </div>
-                <div class="col-lg-10">
-                  <p><span class="negrita">bjstdmngbgr02.thoughtworks.com</span> | idle | 192.168.1.2 | /var/lib/cruise-agent</p>
-                  <div class="cssToolTip">+<a href="#"> Specify Resources</a>
-                    <span class="text-success">
-                      <p class="text-success">(Separete multiple resources name with commas)</p>
-                      <div class="form-group">
-                        <input type="text" class="form-control">kjk
-                      </div>
-                      <button class="btnTooltip">Add resource</button>
-                      <button class="btnTooltip">Close</button>
-                    </span>
-                  </div>
+                <div class="col-lg-11">
+                  <button type="button" class="btn btn-default navbar-btn">All</button>
+                  <button type="button" class="btn btn-default navbar-btn">Physical</button>
+                  <button type="button" class="btn btn-default navbar-btn">Virtual</button>
                 </div>
-              </div> -->
-            </div>
-            <div class="col-lg-4">
-              <h3>Summary</h3>
-              <p>Building</p>
-              <p>Idle</p>
-              <hr>
-              <h3>History</h3>
-              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-            </div>
+              </nav>
+              <div class="CuerpoTab row">
+                <div class="col-lg-8" id="section">
+                </div>
+                <div class="col-lg-4">
+                  <h3>Summary</h3>
+                  <p>Building</p>
+                  <p>Idle</p>
+                  <hr>
+                  <h3>History</h3>
+                  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                </div>
+              </div>
+          </div>
+          <div role="tabpanel" class="tab-pane" id="help">
+            <nav class="row">Help!</nav>
+            <div class="CuerpoTab row"><h2>Publicar contenido de Help!</h2></div>
           </div>
         </div>
-        <div role="tabpanel" class="tab-pane" id="help">...</div>
       </div>
+      <footer class="row">
+        <p>Copyright: ThoughtWorks INC.</p>
+      </footer>
     </div>
-    <footer class="row">
-      <p>Copyright: ThoughtWorks INC.</p>
-    </footer>
-  </div>
-    <!-- /container -->
-    <script type='text/javascript' src='assets/js/main.js'></script>
-    <!-- <script type='text/javascript' src='assets/js/app.js'></script> -->
+      <!-- /container -->
+      <script type='text/javascript' src='assets/js/app.js'></script>
+      <script type='text/javascript' src='assets/js/main.js'></script>
 
-  </body>
-</html>
+    </body>
+  </html>
