@@ -1,32 +1,42 @@
 * {
-  font-family: 'Prompt', sans-serif;
+  font-family: 'monospace', sans-serif;
 }
+
+#tabs .nav-pills > li{
+  border: 2px solid #337ab7;
+  border-radius: 12px 12px 0px 0px;
+}
+/*#tabs ul>li:checked {
+background-color: #337ab7;
+color:white;
+}*/
+#tabs .nav-pills > li > a{
+  border: 0px;
+  border-radius: 12px 12px 0px 0px;
+}
+
+
 #tabs .tab-content {
   color : white;
-  background-color: #428bca;
+  background-color: #337ab7;
   padding : 5px 15px;
   margin-top: 50px;
 }
-#tabs .nav-pills > li{
-  border: 1px solid #337ab7;
-  border-radius: 4px 4px 0px 0px;
-}
-#tabs .nav-pills > li > a{
-  border: 0px;
-  border-radius: 2px 2px 0px 0px;
-}
+
 .imgclass{
   width: 50px;
   height: 50px;
   vertical-align: middle;
+  float: left;
 }
 .elements{
   display: inline-block;
   vertical-align: top;
   margin: 10px;
+  /*float:right;*/
 }
 a:hover {
-    color: #309369;
+  color: #309369;
 }
 .CuerpoTab{
   border: 1px solid #337ab7;
@@ -48,79 +58,99 @@ a:hover {
   height: auto;
 }
 
-.tooltip{
-  visibility: hidden;
-  border-radius: 4px;
-  position: absolute;
-  border: 1px solid;
-}
+/*.tooltip{
+visibility: hidden;
+border-radius: 4px;
+position: absolute;
+border: 1px solid;
+}*/
 /* Clase que tendra el tooltip */
 .cssToolTip {
- position: relative; /* Esta clase tiene que tener posicion relativa */
- /*color: #ff8c00; /* Color del texto */*/
+  position: relative; /* Esta clase tiene que tener posicion relativa */
+  /*color: #ff8c00; /* Color del texto */*/
 }
 
 /* El tooltip */
 .cssToolTip div {
- background: #b6e6cc;
- border: 1px solid #000000;
- border-radius: 10px;
- -webkit-border-radius: 10px;
- -moz-border-radius: 10px;
- box-shadow: 5px 5px 5px #333;
- color: #333333;
- /*display: none; /* El tooltip por defecto estara oculto */
- visibility: hidden;
- font-size: 0.8em;
- padding: 10px;
- /*max-width: 6000px;*/
- position: absolute; /* El tooltip se posiciona de forma absoluta para no modificar el aspezto del resto de la pagina */
- margin-top: 15px; /* Posicion apartir de la parte superior del primer elemento padre con posicion relativa */
- left: 20px; /* Posicion apartir de la parte izquierda del primer elemento padre con posicion relativa */
- z-index: 100;
- width: 60%;/* Poner un z-index alto para que aparezca por encima del resto de elementos */
+  background: #b6e6cc;
+  border: 1px solid #000000;
+  border-radius: 10px;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  box-shadow: 5px 5px 5px #333;
+  color: #333333;
+  /*display: none; /* El tooltip por defecto estara oculto */
+  visibility: hidden;
+  font-size: 0.8em;
+  padding: 10px;
+  /*max-width: 600px;*/
+  position: absolute; /* El tooltip se posiciona de forma absoluta para no modificar el aspezto del resto de la pagina */
+  margin-top: 15px; /* Posicion apartir de la parte superior del primer elemento padre con posicion relativa */
+  left: 20px; /* Posicion apartir de la parte izquierda del primer elemento padre con posicion relativa */
+  z-index: 100;
+  width: 60%;/* Poner un z-index alto para que aparezca por encima del resto de elementos */
+}
+.cssToolTip div p{ /*Elemento padre flex de input*/
+  display: -webkit-flex;
+  display: flex;
+}
+.cssToolTip div input{
+  width: 300px;
 }
 
-
 /* El tooltip cuando se muestra */
-
-
-.cssToolTip .tooltip:after {
-  content: '';
-  position: absolute;
-  border-style: solid;
-  border-width: 0 22px 25px;
-  border-color: #E1EED1 transparent;
-  display: block;
-  width: 0;
-  z-index: 1;
-  margin-left: -22px;
-  top: -25px;
-  left: 16%;
+/*.cssToolTip .tooltip:after {
+content: '';
+position: absolute;
+border-style: solid;
+border-width: 0 22px 25px;
+border-color: #E1EED1 transparent;
+display: block;
+width: 0;
+z-index: 1;
+margin-left: -22px;
+top: -25px;
+left: 16%;
 }
 
 .cssToolTip .tooltip:before{
-  content: '';
-  position: absolute;
-  border-style: solid;
-  border-width: 0 23px 26px;
-  border-color: #52341b transparent;
-  display: block;
-  width: 0;
-  z-index: 0;
-  margin-left: -23px;
-  top: -28px;
-  left: 16%;
-}
+content: '';
+position: absolute;
+border-style: solid;
+border-width: 0 23px 26px;
+border-color: #52341b transparent;
+display: block;
+width: 0;
+z-index: 0;
+margin-left: -23px;
+top: -28px;
+left: 16%;
+}*/
 
 .cssToolTip .show {
   visibility: visible;
 }
 .btnTooltip{
   color: #000;
-  background-color: #ffffff;
-  border-color: #87cefa;
-  border-radius: 5px;
-  border-style: none;
-  padding: 8px;
+  background-color: #CFE3EB;
+  border-color: #87CEFA;
+  border-radius: 50px;
+  border:2px solid;
+  padding: 5px;
+  margin-right: 10px;
+}
+.btndelete{
+  opacity: 0.6;
+  border: 2px solid;
+  color: #6f6c6c;
+  display: inline-block;
+  border-radius: 7px;
+  font-weight: bold;
+  margin-left: 3px;
+}
+.deny{
+  padding-top: 30px;
+  display: inline-block;
+  /*vertical-align: middle;*/
+  float: right;
 }
