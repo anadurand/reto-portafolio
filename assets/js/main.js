@@ -7,5 +7,5 @@ window.addEventListener('load',function(){
 
   var agent=new Agents(agents);
   agent.createAgents(idSection);
-  //agent.addResource();
+  agent.addResource("f");
 });
