@@ -1,26 +1,30 @@
+@import url("tooltip.css");
 * {
-  font-family: 'monospace', sans-serif;
+  font-family: 'Prompt', sans-serif;
 }
-
+.logoTroughtWork{
+  width: 40%;
+  margin-left:15px;
+  margin-top: 2%;
+}
+#tabs{
+  margin-top: 2%;
+}
 #tabs .nav-pills > li{
-  border: 2px solid #337ab7;
-  border-radius: 12px 12px 0px 0px;
+  border: 1px solid rgb(51, 122, 183);
+  border-image: initial;
+  border-radius: 4px 4px 0px 0px;
 }
 #tabs .nav-pills > li > a{
   border: 0px;
-  border-radius: 12px 12px 0px 0px;
+  border-radius: 4px 4px 0px 0px;
 }
-
-#tabs .tab-content {
+.tab-content {
   color : white;
   background-color: #337ab7;
   padding : 5px 15px;
-  margin-top: 50px;
 }
-
 .imgclass{
-  width: 50px;
-  height: 50px;
   vertical-align: middle;
   float: left;
 }
@@ -28,10 +32,10 @@
   display: inline-block;
   vertical-align: top;
   margin: 10px;
-  /*float:right;*/
 }
 a:hover {
-  color: #309369;
+  color: #4284bc;
+  font-weight: bold;
 }
 .CuerpoTab{
   border: 1px solid #337ab7;
@@ -39,108 +43,47 @@ a:hover {
   color: black;
 }
 .idle{
-  background-color: #a1c7f0;
+  background-color: #fcf8e3;
 }
 .building{
-  background-color:#e6d1eb;
+  background-color:#dff0d8;
 }
-.idle, .building{
-  border: 1px solid;
+.idle, .building {
+  border: 1px solid #ddd;
   -webkit-border-radius: 10px 10px;  /* Safari  */
   -moz-border-radius: 10px 10px;     /* Firefox */
   margin: 15px;
   padding: 10px;
   height: auto;
 }
-
-/* Clase que tendra el tooltip */
-.cssToolTip {
-  position: relative; /* Esta clase tiene que tener posicion relativa */
-  /*color: #ff8c00; /* Color del texto */*/
-}
-
-/* El tooltip */
-.cssToolTip div {
-  background: #b6e6cc;
-  border: 1px solid #000000;
-  border-radius: 10px;
-  -webkit-border-radius: 10px;
-  -moz-border-radius: 10px;
-  box-shadow: 5px 5px 5px #333;
-  color: #333333;
-  /*display: none; /* El tooltip por defecto estara oculto */
-  visibility: hidden;
-  font-size: 0.8em;
-  padding: 10px;
-  /*max-width: 600px;*/
-  position: absolute; /* El tooltip se posiciona de forma absoluta para no modificar el aspezto del resto de la pagina */
-  margin-top: 15px; /* Posicion apartir de la parte superior del primer elemento padre con posicion relativa */
-  left: 20px; /* Posicion apartir de la parte izquierda del primer elemento padre con posicion relativa */
-  z-index: 100;
-  width: 60%;/* Poner un z-index alto para que aparezca por encima del resto de elementos */
-}
-.cssToolTip div p{ /*Elemento padre flex de input*/
-  display: -webkit-flex;
-  display: flex;
-}
-.cssToolTip div input{
-  width: 300px;
-}
-
-/* El tooltip cuando se muestra */
-/*.cssToolTip .tooltip:after {
-content: '';
-position: absolute;
-border-style: solid;
-border-width: 0 22px 25px;
-border-color: #E1EED1 transparent;
-display: block;
-width: 0;
-z-index: 1;
-margin-left: -22px;
-top: -25px;
-left: 16%;
-}
-
-.cssToolTip .tooltip:before{
-content: '';
-position: absolute;
-border-style: solid;
-border-width: 0 23px 26px;
-border-color: #52341b transparent;
-display: block;
-width: 0;
-z-index: 0;
-margin-left: -23px;
-top: -28px;
-left: 16%;
-}*/
-
-.cssToolTip .show {
-  visibility: visible;
-}
-.btnTooltip{
-  color: #000;
-  background-color: #CFE3EB;
-  border-color: #87CEFA;
-  border-radius: 50px;
-  border:2px solid;
-  padding: 5px;
-  margin-right: 10px;
-}
-.btndelete{
-  opacity: 0.6;
-  border: 2px solid;
-  color: #6f6c6c;
-  display: inline-block;
-  border-radius: 7px;
-  font-weight: bold;
-  margin-left: 3px;
-  margin-right: 10px;
-}
 .deny{
-  padding-top: 30px;
   display: inline-block;
-  /*vertical-align: middle;*/
   float: right;
+}
+.navbar-top-links {
+    margin-right: 0;
+}
+.navbar-top-links li:last-child {
+    margin-right: 15px;
+    margin-top: 2%;
+}
+.nav-pills>li.active>a{
+    color: #fff;
+    background-color: #337ab7;
+}
+.menutab{
+  margin-right: 15px;
+  margin-left: 15px;
+}
+.titular{
+  margin-left: 15px;
+  font-size: 23px;
+}
+.btnDelete{
+  color: #a94442;
+  margin-left: 2px;
+}
+.resource{
+  color: #555;
+  margin-left: 2%;
 }

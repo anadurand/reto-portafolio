@@ -1,0 +1,35 @@
+/* Clase que tendra el tooltip */
+.cssToolTip {
+  position: relative; /* Esta clase tiene que tener posicion relativa */
+}
+/* El tooltip */
+.cssToolTip div {
+  background: #b6e6cc;
+  border: 1px solid transparent;
+  border-radius: 10px;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  box-shadow: 5px 5px 5px #333;
+  color: #333333;
+  /*display: none; /* El tooltip por defecto estara oculto */
+  visibility: hidden;
+  font-size: 0.8em;
+  padding: 10px;
+  /*max-width: 600px;*/
+  position: absolute; /* El tooltip se posiciona de forma absoluta para no modificar el aspezto del resto de la pagina */
+  margin-top: 15px; /* Posicion apartir de la parte superior del primer elemento padre con posicion relativa */
+  left: 20px; /* Posicion apartir de la parte izquierda del primer elemento padre con posicion relativa */
+  z-index: 100;
+  width: 60%;/* Poner un z-index alto para que aparezca por encima del resto de elementos */
+}
+.cssToolTip .show {
+  visibility: visible;
+}
+.btnTooltip{
+  color: #000;
+  background-color: #ffffff;
+  border-radius: 5px;
+  border: 2px solid #fff;
+  padding: 5px;
+  margin-right: 10px;
+}

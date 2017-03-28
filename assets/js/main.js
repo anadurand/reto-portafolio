@@ -7,6 +7,7 @@ window.addEventListener('load',function(){
 
   var agent=new Agents(agents);
   agent.createAgents(idSection);
+  
   var classResource=document.getElementsByClassName('resource');
   agent.addResource(classResource);
 
