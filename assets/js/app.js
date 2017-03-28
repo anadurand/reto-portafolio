@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 //Mostrar y Ocultar contenidos de tabs
 var dashboard=document.getElementById('dashboard');
 var mycruise=document.getElementById('mycruise');
@@ -31,9 +30,3 @@ contents[3].onclick=function(){
   show(help);
   hidden(dashboard,mycruise,agents);
 }
-=======
-var agents = [ { nombre : "bjstdmngbgr02.thoughtworks.com", estado : "idle",  ip : "192.168.1.2", directorio : "/var/lib/cruise-agent" },
-			 { nombre : "bjstdmngbgr02.thoughtworks.com", estado : "idle",  ip : "192.168.1.2", directorio : "/var/lib/cruise-agent"  },
-			 {nombre : "bjstdmngbgr02.thoughtworks.com", estado : "idle",  ip : "192.168.1.2", directorio : "/var/lib/cruise-agent" },
-			 {nombre : "bjstdmngbgr02.thoughtworks.com", estado : "idle",  ip : "192.168.1.2", directorio : "/var/lib/cruise-agent" }];
->>>>>>> frontend
