@@ -10,12 +10,13 @@ describe('reto portafolio test',function(){
      app=new appTest.Agents();
    });
    it('valida si input tiene contenido',function(){
-     var recursos=[[obj],[obj]];
      assert.deepEqual(app.resources,recursos);
    });
 
    it('porder añadir recurso',function(){
      //assert(typeOf )
+     app.resources=[{},{}];
+     var recursos=[[obj],[obj]];
      assert.deepEqual(app.resources,[obj,obj]);
    });
    it('poder eliminar recurso',function(){
