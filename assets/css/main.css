@@ -6,15 +6,10 @@
   border: 2px solid #337ab7;
   border-radius: 12px 12px 0px 0px;
 }
-/*#tabs ul>li:checked {
-background-color: #337ab7;
-color:white;
-}*/
 #tabs .nav-pills > li > a{
   border: 0px;
   border-radius: 12px 12px 0px 0px;
 }
-
 
 #tabs .tab-content {
   color : white;
@@ -49,7 +44,7 @@ a:hover {
 .building{
   background-color:#e6d1eb;
 }
-.idle, .building {
+.idle, .building{
   border: 1px solid;
   -webkit-border-radius: 10px 10px;  /* Safari  */
   -moz-border-radius: 10px 10px;     /* Firefox */
@@ -58,12 +53,6 @@ a:hover {
   height: auto;
 }
 
-/*.tooltip{
-visibility: hidden;
-border-radius: 4px;
-position: absolute;
-border: 1px solid;
-}*/
 /* Clase que tendra el tooltip */
 .cssToolTip {
   position: relative; /* Esta clase tiene que tener posicion relativa */
@@ -147,6 +136,7 @@ left: 16%;
   border-radius: 7px;
   font-weight: bold;
   margin-left: 3px;
+  margin-right: 10px;
 }
 .deny{
   padding-top: 30px;

@@ -1,23 +1,19 @@
 function Agents(properties){
     this.properties=properties;
-    //this.image=image;
-    this.resources=[];
-    this.addResource=function(element){
-      console.log(this.resources);
-      //this.resources.push(element);
-      // alert(this.resources+"new");
-      console.log(element);
+    this.allResources=[];
+    this.addResource=function(arrayElement){
+      console.log(arrayElement);
+      for(var i=0;i<classElement.length;i++){
+        this.allResources[i]=arrayElement[i].outerText;
+      }
+      console.log(this.allResources);
     };
     this.createAgents=function(idAgentSection){
       var space="&nbsp; | &nbsp;";
-      var arrayResources=this.resources;
-      var methodAdd=this.addResource;
-      console.log(methodAdd);
-      console.log(arrayResources);
-      this.properties.forEach(function(e,i){
-        //creacion de nodos
+
+      this.properties.forEach(function(e,i){//creacion de nodos
         var articleAgent=document.createElement('article');
-        articleAgent.className=e.type;
+        articleAgent.className=e.type;//+" container";
         var divImage=document.createElement('img');
         divImage.className="imgclass";
         divImage.setAttribute("src",'assets/images/pc.png');
@@ -56,6 +52,7 @@ function Agents(properties){
     //Crea tooltip
         var divTool=document.createElement('div');
         divTool.id="tooltip"+i;
+        divTool.className="container";
         divTool.innerHTML="<p>(Separate multiple resources name with commas)</p>";
         var pTool=document.createElement('p');
         var inputTool=document.createElement('input');
@@ -80,16 +77,14 @@ function Agents(properties){
           tooltip.classList.toggle("show");
           inputTool.focus();
           window.onclick=function(event){
-            if(!event.target.matches('.specify')){
+            if(!event.toElement.matches('.specify')){
               tooltip.classList.remove('show');
-              // if (tooltip.classList.contains('show')) {
-              //   tooltip.classList.remove('show');
-        			// }
             }
           }
+          console.log(e);
         });
 
-        var newArr=[], idElement=0;
+        var arrIdResorces=[], idElement=0;
         btnAddResource.onclick=function(e){
           if(inputTool.value.trim().length==0){
             alert("Debe ingresar algun recurso");
@@ -102,9 +97,9 @@ function Agents(properties){
                 var btnDelete=document.createElement('img');
                 btnDelete.className='btndelete';
                 //si usamos id de function este se reinicia en 0 x cada click
-                //newResource.id="recurso"+id;
                 newResource.id=idElement;//"recurso"+i+id+idElement;
-                spanTexto.innerHTML="&emsp;"+e;
+                newResource.className="resource";
+                spanTexto.innerHTML=e;
                 btnDelete.src='assets/images/clear.png';
                 newResource.appendChild(spanTexto);
                 newResource.appendChild(btnDelete);
@@ -112,37 +107,37 @@ function Agents(properties){
 
                 //añade al array recursos los elementos de recurso creados
                 //arrayResources.push(newResource);
-                //console.log(newResource);
-                newArr.push(newResource);
-                methodAdd(newResource);
+                arrIdResorces.push(idElement);
                 idElement++;
+
+                /*Event click boton Delete*/
                 btnDelete.onclick=function(e){
                   var idPadre=e.target.parentNode.getAttribute('id');
                   spanResources.removeChild(newResource);
-                  newArr.splice(idPadre,1);
+                  //-------arreglar
+                  //newArr.splice(idPadre,1);
                   //arrayResources.splice(idPadre,1);
-                  console.log(newArr);
+                //  console.log(newArr);
                 }
                 inputTool.value="";
                 inputTool.focus();
+
             });//fin forEach btnAddResource
           }
-          //console.log(arrayResources);
-          console.log(newArr);
         }//fin inclick btnAddResource
 
+        /*Event click boton Close*/
         btnClose.onclick=function(){
-          //e.preventDefault();
           var tooltip=document.getElementById(divTool.id);
-          tooltip.classList.toggle("show");
+          tooltip.classList.remove("show");
         }
+
+        /*Fragment*/
         var frag = document.createDocumentFragment();
         frag.appendChild(articleAgent);
         idAgentSection.appendChild(frag);
-
       });
     };
-
 }
 
 if(typeof exports!=='undefined'){

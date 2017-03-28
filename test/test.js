@@ -14,10 +14,10 @@ describe('reto portafolio test',function(){
    });
 
    it('porder añadir recurso',function(){
-     //assert(typeOf )
-     app.resources=[{},{}];
-     var recursos=[[obj],[obj]];
-     assert.deepEqual(app.resources,[obj,obj]);
+     var recursos=[];
+     app.addResource()
+     assert.deepEqual(app.resources,recursos);
+
    });
    it('poder eliminar recurso',function(){
      //assert.deepEqual([],);
