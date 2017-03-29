@@ -87,3 +87,12 @@ a:hover {
   color: #555;
   margin-left: 2%;
 }
+.btndelete{
+  opacity: 0.6;
+  border: 2px solid;
+  color: #6f6c6c;
+  display: inline-block;
+  border-radius: 7px;
+  font-weight: bold;
+  margin-left: 3px;
+}

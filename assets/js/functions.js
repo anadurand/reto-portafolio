@@ -1,11 +1,12 @@
-  function Agents(properties){
+function Agents(properties){
       this.properties=properties;
       this.allResources=[];
       this.addResource=function(arrayElement){
-        console.log(arrayElement);
-        for(var i=0;i<arrayElement.length;i++){
-          this.allResources[i]=arrayElement[i].outerText;
-        }
+        //console.log(arrayElement);
+        this.allResources=arrayElement;
+        // for(var i=0;i<arrayElement.length;i++){
+        //   this.allResources[i]=arrayElement[i].outerText;
+        // }
         console.log(this.allResources);
       };
       this.createAgents=function(idAgentSection){
@@ -83,33 +84,32 @@
             console.log(e);
           });
 
-          var arrIdResorces=[], idElement=0;
+          var arrayResources=[], idElement=0;
           btnAddResource.onclick=function(e){
-            var arrResource=inputTool.value.split(",");
-            console.log(inputTool.value.length);
-            console.log(arrResource);
-            if(arrResource=="" || inputTool.value.length==0){
+            var arrResource=inputTool.value.trim().split(",");
+            if(inputTool.value.trim().length==0){
               alert("Debe ingresar algun recurso");
+              inputTool.value="";
               return false;
             }else {
+              //console.log(arrResource);
               arrResource.forEach(function(e,id){
                   var newResource=document.createElement('span');
                   var spanTexto=document.createElement('span');
-                  var btnDelete=document.createElement('i');
-                  spanTexto.className='resource';
-                  btnDelete.className='glyphicon glyphicon-remove-circle btnDelete';
-
-                  //si usamos id de function este se reinicia en 0 x cada click
+                  var btnDelete=document.createElement('img');
                   newResource.id=idElement;//"recurso"+i+id+idElement;
                   newResource.className="resource";
-                  spanTexto.innerHTML=e;
+                  spanTexto.innerHTML=e.trim();
+                  btnDelete.className="btndelete";//'glyphicon glyphicon-remove-circle btnDelete';
+                  btnDelete.src="assets/images/clear.png";
                   newResource.appendChild(spanTexto);
                   newResource.appendChild(btnDelete);
                   spanResources.appendChild(newResource);
 
                   //añade al array recursos los elementos de recurso creados
-                  //arrayResources.push(newResource);
-                  arrIdResorces.push(idElement);
+                  //arrayResources.push(e);
+                  arrayResources.push(newResource)
+                  // console.log(arrayResources);
                   idElement++;
 
                   /*Event click boton Delete*/
@@ -118,9 +118,8 @@
                     console.log(idPadre);
                     spanResources.removeChild(newResource);
                     //-------arreglar
-                    //newArr.splice(idPadre,1);
-                    //arrayResources.splice(idPadre,1);
-                  //  console.log(newArr);
+                    arrayResources.splice(idPadre,1);
+                    console.log(arrayResources);
                   }
                   inputTool.value="";
                   inputTool.focus();
